@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 4</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+        function upDate(previewPic){
+            console.log(previewPic)
+            document.querySelector("#image").innerHTML = previewPic.alt
+            document.querySelector("#image").style.backgroundImage = "url("+ previewPic.src +")"
+  
+        }
+
+        function unDo(){
+        document.querySelector("#image").style.backgroundImage = 'url("")'
+        document.querySelector("#image").innerHTML= "Hover over an image below to display here"
+        }
+    // I used Two functions here.  Starter idea at: 
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 4</h1>
+        
+        <div id = "image">
+                Hover over an image below to display here.
+        </div>
+            
+        <img class = "preview" tabindex = "0"  
+        alt = "Nigerian clothing" 
+        src = "http://creativesoulphoto.com/wp-content/uploads/2018/07/NYC-July18-8765-Edit.jpg"
+        onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+            
+        <img class = "preview" tabindex = "0" 
+        alt = "Ten year old girl with her afro" 
+        src = "http://creativesoulphoto.com/wp-content/uploads/2018/07/Dallas17-3.jpg" 
+        onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+            
+        <img class = "preview" tabindex = "0"  
+        src = "http://creativesoulphoto.com/wp-content/uploads/2018/07/NYCFeb18-1638-Edit_pp-1.jpg" 
+        alt = "Malawian Clothing" 
+        onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+
+        <img class = "preview" tabindex = "0"  
+        src = "http://creativesoulphoto.com/wp-content/uploads/2018/07/NYC-July18-9129-Edit.jpg" 
+        alt = "West African Prints" 
+        onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+
+        <img class = "preview" tabindex = "0"  
+        src = "http://creativesoulphoto.com/wp-content/uploads/2018/07/NYC-July18-9809-Edit-768x1152.jpg"
+        alt = "Ten year old boy rocking an afro" 
+        onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+
+        <img class = "preview" tabindex = "0"  
+        src = "http://creativesoulphoto.com/wp-content/uploads/2018/07/ZaelaAmari-6993-Edit-Edit.jpg" 
+        alt = "Ethiopian Clothing" 
+        onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+
+        
+</body>
+</html>
+    
