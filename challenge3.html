@@ -28,16 +28,18 @@
         missingName.style.display= "block";
         }
 
-      // else {
-      //   return True;
-      // }
+        else {
+        missingName.style.display= "none";
+      }
     
       if(addrInput.length==0){
         missingAddr.style.display="block";
       }
+      else {
+        missingAddr.style.display= "none";
+      }
 
       if (nameInput.length === 0 || addrInput.length === 0) {
-        console.log('called');
         return false;
       }
       // Write a function that displays the appropriate error message(s) if a field is left blank.  Make sure the form action is not performed if either field is blank.
